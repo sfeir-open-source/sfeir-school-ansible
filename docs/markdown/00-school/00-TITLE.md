@@ -1,8 +1,8 @@
-<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="xxx" -->
+<!-- .slide: class="first-slide" sfeir-level="2" sfeir-techno="ansible" -->
 
 # **Welcome to Sfeir School**
 
-## **XXX 200**
+## **ANSIBLE 200**
 
 ##==##
 

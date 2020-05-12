@@ -2,16 +2,15 @@
 
 # Présentation
 
-![speaker](./assets/images/jf.jpg)
-![badge](./assets/images/gde.png)
+![speaker](./assets/images/md.jpg)
 ![company](./assets/images/logo_sfeir_bleu_orange.png)
 
-## Jean-François Garreau
+## Mickael Dangleterre
 
-### CTO front
+### Cloud Architect
 <!-- .element: class="icon-rule icon-first" -->
 
-### @jefbinomed
+### @mikamakusa
 <!-- .element: class="icon-twitter icon-second" -->
 
 
