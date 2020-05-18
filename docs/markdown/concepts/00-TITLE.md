@@ -128,11 +128,9 @@ Le screenshot ne contient pas tous les paramètres nécessaires à l'utilisation
 l'idempotence signifie qu'une opération a le même effet qu'on l'applique une ou plusieurs fois.
 
 C'est pour cela que les actions système telles que l'installation de package ou le démarrage de services ne proposent que les statuts suivants : 
-* started
-* stopped
-* restarted
-* enabled
-* disabled
+* started / stopped / restarted
+* présent / absent
+* enabled / disabled
 
 Notes:
 Ainsi, si le service est déjà démarré ou le package déjà installé, Ansible n'y touchera pas. 

@@ -52,7 +52,7 @@ L'idée du **YAML** est que toute donnée (à certaines exceptions) peut être r
 <br/>
 
 ## Le JINJA
-Le **Jinja** est un moteur de template destiné au **Python**.
+Le **Jinja** est un moteur de template destiné au **Python**.  
 Ansible utilise ce moteur de templating dans le but d'effectuer de l'interpolation de variable dans les **Playbooks**
 
 ##==##
@@ -132,7 +132,7 @@ Dans les templates, cela requiert d'un peu plus de technique...
 Le résultat d’un playbook dépend souvent d’une value, d’un “fact” ou bien du résultat d’un précédent playbook.
 Les instructions conditionnelles sont les suivantes :
 * when
-* Register
+* register
 
 ##==##
 <!-- .slide: class="with-code" -->

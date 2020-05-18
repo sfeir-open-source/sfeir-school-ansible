@@ -29,7 +29,6 @@ Carrefour fait également par grands utilisateurs.
 # Introduction
 <br/>
 
-<<<<<<< HEAD
 ## Pourquoi Ansible ?
 Les avantages d'Ansible par rapport à des scripts :
 * Provisionning
