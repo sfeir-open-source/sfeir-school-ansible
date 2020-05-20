@@ -57,7 +57,7 @@ function prodSlides() {
     'production/00-TITLE.md',
     'production/01-QUIZZ.md',
     'production/02-DEMO.md',
-    'production/03-LAB.md'
+    'production/02-LAB.md'
   ]
 }
 
