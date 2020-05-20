@@ -142,9 +142,46 @@ Ainsi, si le service est déjà démarré ou le package déjà installé, Ansibl
 <br/>
 
 ## Les tasks
-L’unité de base d’un playbook et de la commande ansible qui sera exécutée sur un ou plusieurs hôtes.
+L’unité de base d’un playbook et de la commande ansible qui sera exécutée sur un ou plusieurs hôtes.  
+Pour être plus précis, il s'agit de l'exécution d'un module en fonction de paramètres (requis ou non).  
+La task peut être définie dans un playbook ou dans un role (qui sera lui-même appelé par le playbook).
 
 ![h-200:center](./assets/images/tasks.png)
+
+##==##
+<!-- .slide: -->
+
+# Concepts
+<br/>
+
+## Les roles
+Le principe d'un role est de décomposer un playbook complexe en élément réutilisable et *humainement lisible*.  
+Un rôle fourni un cadre pour une réutilisation indépendante de : 
+* variables
+* tâches
+* handlers
+* templates
+
+Chaque rôle est limité à une fonction particulière (installation/configuration d'Apache) et ne peut être exécuté que dans le cadre d'un playbook (contrairement à la tâche)
+
+##==##
+<!-- .slide: -->
+
+# Concepts
+<br/>
+
+# Les roles - Anatomie
+<br/>
+
+![h-400:float-left](./assets/images/Screenshot%202020-05-20%20at%2016.31.32.png)
+
+* tasks : Contient la liste des tâches  
+* handlers : Contient les évènements systèmes
+* files : Contient les fichiers à déployer
+* templates : Contient les templates à déployer
+* defaults : Contient les variables par défault du rôle
+* meta : Définit certaines metadonnées pour ce rôle
+* vars : Contient d'autres variables
 
 ##==##
 <!-- .slide: -->

@@ -1,6 +1,9 @@
 <!-- .slide: class="exercice" -->
 ## Atelier
-# Création d'un playbook
+# Découverte des commandes
 
-*Objectif* :
-Créer un playbook et le déployer dans un conteneur.
+*Objectifs* :
+* Afficher la documentation d'un plug-in
+* Afficher un inventaire
+* Utiliser la console Ansible pour exécuter une ou plusieurs tâche
+* Afficher la configuration d'Ansible

@@ -107,6 +107,21 @@ Dans les playbooks, l'interpolation des variables est très simple:
 ##==##
 
 <!-- .slide: -->
+
+# La syntaxe
+<br/>
+
+## La précédence des variables
+Une question important a se poser au sujet des variables : *Où définir une variable ?*.  
+Selon la philosophie d'Ansible, cela ne sert à rien que la variable en question soit à 5 endroits différents.    
+Si elles sont définies à plusieurs endroits différents, elles seront écrasées dans l'ordre qui suit : 
+
+![h-400:center](./assets/images/Screenshot%202020-05-20%20at%2016.03.29.png)
+
+
+##==##
+<!-- .slide: -->
+
 # La syntaxe
 <br/>
 
