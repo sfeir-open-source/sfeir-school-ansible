@@ -52,49 +52,6 @@ Contrairement à l'inventaire dynamique (qui sera abordé plus tard), l'inventai
 # Concepts
 <br/>
 
-## Inventaire Statique
-
-Sur un inventaire statique, nous avons besoin des paramètres suivants : 
-
-| paramètres | values | requis |
-| ---------- | ------ | ------ |
-| ansible_connection | ssh/winrm/localhost | oui |
-| ansible_host | le nom du host auquel se connecter | oui |
-| ansible_port | les ports SSH ou winrm définis sur les machines ciblées | oui - uniquement si les ports ne sont pas ceux par défaut |
-| ansible_user | root ou administrator (Windows) ou tout autre user ayant des droits assez élevés | non |
-| ansible_ssh_pass | Mot de passe de l'utilisateur admin | non |
-
-Notes:
-Ce sont les paramètres les plus courants dans un inventaire statique.
-D'autres paramètres, en rapport avec le type de connexion (SSH ou non-SSH) ou avec l'élévation des privilèges ou avec les paramètres d'environnement.
-Dans le cas d'une connexion NON-SSH, il s'agit de local ou de docker
-
-##==##
-<!-- .slide: -->
-
-# Concepts
-<br/>
-
-## Inventaire Statique
-
-**Important**
-* Ansible peut utiliser deux formes d'inventaire statique différent : **INI** ou **YAML**
-* Si vous travaillez avec plusieurs environnements, il est recommandé d'utiliser plusieurs inventaires
-* Comme évoqué un peu plus tôt, vous pouvez grouper vos *managed nodes*
-* Et utiliser des variables spécifiques à ces groupes
-
-Notes:
-- L'inventaire YAML est une reproduction de l'inventaire INI.
-- lorsque vous invoquez la commande ansible-playbook, c'est à ce moment que vous préciserez l'inventaire à utiliser.
-- certains groupes peuvent contenir des managed nodes d'autres groupes, vous pouvez également créer des groupes enfants
-- si les variables en question sont stockées dans un dossier group_vars/[GROUP_NAME]/settings.yaml
-
-##==##
-<!-- .slide: -->
-
-# Concepts
-<br/>
-
 ## Les modules
 Chaque module a une utilisation particulière, de l'administration des utilisateurs sur un type spécifique de base de données à la gestion des interfaces VLAN sur un type spécifique de périphérique réseau.
 Le but d'un module est de proposer une commande a exécuter afin d'effectuer une action particulière.
