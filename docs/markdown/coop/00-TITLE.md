@@ -10,15 +10,17 @@
 <br/>
 
 ## Ansible Galaxy
-Ansible-galaxy permet de recenser les modules produits par la communauté.  
-Les modules sont des collections de tâches standardisées permettant de déployer de A à Z un middleware spécifique, par exemple : 
+Ansible-galaxy permet de recenser les rôles produits par la communauté.  
+Les rôles sont des collections de tâches standardisées permettant de déployer de A à Z un middleware spécifique, par exemple : 
 * Cassandra
 * MariaDB
 * Nginx
 * keycloak
 * Prometheus
 
-Vous pouvez également développer vos propres modules, les versionner sur git/gitlab/bitbucket et les réutiliser de la même manière que s’ils étaient enregistrés dans ansible-galaxy.
+Vous pouvez également développer vos propres rôles, les versionner sur git/gitlab/bitbucket et les réutiliser de la même manière que s’ils étaient enregistrés dans ansible-galaxy.
+
+Ansible-Galaxy permet également à la communauté de rendre disponible des modules qui ne sont pas encore intégré à Ansible et, ainsi, étendre les fonctionnalités proposées.
 
 ##==##
 

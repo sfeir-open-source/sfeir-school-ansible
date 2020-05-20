@@ -48,7 +48,7 @@ function coopSlides() {
   return[
     'coop/00-TITLE.md',
     'coop/01-QUIZZ.md',
-    'coop/02-LAB.md'
+    'coop/03-LAB.md'
   ]
 }
 
@@ -56,7 +56,8 @@ function prodSlides() {
   return[
     'production/00-TITLE.md',
     'production/01-QUIZZ.md',
-    'production/02-LAB.md'
+    'production/02-DEMO.md',
+    'production/03-LAB.md'
   ]
 }
 

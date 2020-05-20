@@ -1,8 +1,8 @@
 <!-- .slide: class="exercice" -->
 ## Atelier
 
-# Cryptage de fichiers
-*Objectif* : Crypter un ou plusieurs fichiers
+# Chiffrage de fichiers
+*Objectif* : Chiffrer un ou plusieurs fichiers
 
 ##==##
 
@@ -10,7 +10,7 @@
 ## Atelier
 # Création de rôles avec ansible-galaxy
 *Objectifs* :
-* Crypter un ou plusieurs fichiers
+* Chiffrer un ou plusieurs fichiers
 * Créer un ou plusieurs rôles avec ansible-galaxy
 
-**Les rôles créés doivent contenir au moins un fichier crypté**
+**Les rôles créés doivent contenir au moins un fichier chiffré**

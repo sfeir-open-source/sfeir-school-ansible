@@ -48,6 +48,25 @@ Cependant, avec les autres outils de CICD, on peut démarrer les playbook de la 
 # En production
 <br/>
 
+## Déploiement continu
+### Cas pratique : Ansible Tower et les Webhooks
+Un webhook permet d'exécuter une commande spécifiée entre plusieurs appliances sur Internet.  
+Ansible Tower propose l'intégration des *webhook* **Gitlab** et **Github**.
+
+Le principe est le suivant : 
+* On défini un token **GitHub/Gitlab** avec les autorisations adequates
+* On crée des identifiants pour **Github/Gitlab** dans **Ansible Tower**
+* On crée ensuite le webhook avec le **Webhook Key** provenant de **Ansible Tower**
+
+Notes: 
+Une démo est prévue avant l'atelier
+
+##==##
+<!-- .slide: -->
+
+# En production
+<br/>
+
 ## Les bastions
 Ansible communique avec les machines de l'inventaire via SSH.  
 En précisant, dans le fichier de configuration d'ansible quelle configuration ssh utiliser pour se connecter aux serveurs cibles, ansible l'utilisera pour les provisionner.
