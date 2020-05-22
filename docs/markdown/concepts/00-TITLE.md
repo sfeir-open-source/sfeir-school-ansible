@@ -53,9 +53,14 @@ Contrairement à l'inventaire dynamique (qui sera abordé plus tard), l'inventai
 <br/>
 
 ## Les modules
-Chaque module a une utilisation particulière, de l'administration des utilisateurs sur un type spécifique de base de données à la gestion des interfaces VLAN sur un type spécifique de périphérique réseau.
-Le but d'un module est de proposer une commande a exécuter afin d'effectuer une action particulière.
-![h-500:center](./assets/images/modules.png)
+Le principe d'un module est de décrire le résultat attendu par une commande.  
+Nous faisons référence au concept de **DSC** (Desired State Configuration) introduit par d'autres middleware de **Configuration Management** tels que : 
+* **SaltStack**
+* **Puppet**
+* **Chef**
+* **CfeEngine**
+
+Ou par des langages de scripting (**Powershell** à partir de la version 4.5, par exemple).
 
 ##==##
 <!-- .slide: -->
@@ -64,16 +69,32 @@ Le but d'un module est de proposer une commande a exécuter afin d'effectuer une
 <br/>
 
 ## Les modules
-Chaque module dispose de paramètres ainsi que des pré-requis.  
-Par exemple : *psexec*   
-Ses pré-requis : 
-* pypsexec
-* smprotocol[kerberos]
 
-![h-400:center](./assets/images/psexec.png)
+Exemple:  
+le module **Package** prends deux paramètres : **Name** et **state**.  
+Le module vérifie que chaque package du paramètre **Name** est présent avant d'effectuer l'action présente au niveau du paramètre **state**.
+Si **state** correspond à *absent*, le package sera supprimé
+
+```yaml
+- name: install ntpdate
+  package:
+    name: ntpdate
+    state: present
+
+- name: remove the apache package
+  package:
+    name: "{{ apache }}"
+    state: absent
+```
+
+**Package** est un module générique probablement destiné à remplacer les modules spécifiques aux OS Linux que sont **apt**, **yum**, **pacman**, **zypper** ou **sorcery**.
 
 Notes:
-Le screenshot ne contient pas tous les paramètres nécessaires à l'utilisation de ce module.
+apt -> ubuntu/debian
+yum -> redhat/centos
+pacman -> archlinux
+zypper -> suse
+sorcery -> sourcemage
 
 ##==##
 <!-- .slide: -->
