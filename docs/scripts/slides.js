@@ -32,6 +32,7 @@ function syntaxSlides() {
   return [
     'syntaxe/00-TITLE.md',
     'syntaxe/01-QUIZZ.md',
+    'syntaxe/03-DEMO.md',
     'syntaxe/02-LAB.md'
   ];
 }

@@ -87,15 +87,19 @@ other2.example.com     ansible_connection=ssh        ansible_user=myotheruser
 
 ## L'inventaire dynamique
 ### Les scripts
-Les inventaires dynamiques se présentent sous deux formes selon le provider cloud sur lequel Ansible va déployer les middlewares : 
-* Un script nécessitant des identifiants pour se connecter au compte du provider Cloud,
-* un plugin intégré à Ansible
+Les inventaires dynamiques se présentent sous deux formes selon le provider cloud sur lequel Ansible va déployer les middlewares.   
+La majorité des Cloud Provider proposent des scripts d'inventaire dynamique : 
+* **AWS**, 
+* **Azure**,
+* **Openstack**,
+* **DigitalOcean**,
+* **Alibaba Cloud**,
+* **Oracle Cloud**
 
-Dans le cas d'un script, il faut le préciser dans la commande a exécuter : 
+Pour le moment, la fonction d'inventaire dynamique pour **Google Cloud** est la seule disponible uniquement par le biais d'un plugin. 
 
-```bash
-ansible-playbook -i [SCRIPT].py playbook.yml
-```
+Notes:
+En fait, Openstack, AWS, Azure et CloudScale sont aussi disponible en plugins.
 
 ##==##
 <!-- .slide: -->
@@ -126,7 +130,6 @@ service_account_file: <service_account_file>.json
 
 Notes:
 Ansible gère de manière différente les inventaires dynamique de Cloud Provider.
-GCP est le seul provider a disposer d’un plugin fonctionnel parmi les 3 les plus demandés sur le marché.
 Les groupes statiques et dynamiques sont également gérés dans le cas d'inventaires dynamique, tout dépend de la configuration
 Pour démarrer ansible avec un plugin d'inventaire dynamique, après avoir configuré ansible et le plugin, ajouter '-i [CONFIG_PLUGIN].yml' à la commande.
 
@@ -137,8 +140,28 @@ Pour démarrer ansible avec un plugin d'inventaire dynamique, après avoir confi
 # En production
 <br/>
 
-## Déploiment continu
-Parmi les outils de CICD, seul Jenkins dispose d’un plugin ansible permettant d’exécuter un playbook et de déchiffrer des secrets.
+## L'inventaire dynamique
+Quoi qu'il arrive, que ce soit un inventaire dynamique géré via un script ou un plugin, il faudra toujours préciser à la commande ansible que vous allez exécuter que vous utilisez quel inventaire que vous souhaitez utiliser.  
+
+Dans le cas d'un script, il faut le préciser dans la commande a exécuter : 
+```bash
+ansible-playbook -i [SCRIPT].py playbook.yml
+```
+
+Dans le cas d'un plugin : 
+```bash
+ansible-playbook -i [CONFIG_PLUGIN].yml playbook.yml
+```
+
+
+##==##
+<!-- .slide: -->
+
+# En production
+<br/>
+
+## Déploiement continu
+Parmi les outils de CICD, seul Jenkins dispose d’un plugin ansible permettant d’exécuter un playbook et de déchiffrer des secrets.  
 Si vous devez déployer sur plusieurs environnements, vous pouvez créer un fichier de variable par environnement qui seront “appelés” au moment de l’exécution du playbook.
 
 Notes:
